@@ -152,7 +152,7 @@ namespace Postal
         {
             var fullViewName = GetAlternativeViewName(email, alternativeViewName);
 #if ASPNET5
-            var output = alternativeViewRenderer.Render(email, _url);
+            var output = alternativeViewRenderer.Render(email, _url, fullViewName);
 #else
             var output = alternativeViewRenderer.Render(email, fullViewName);
 #endif
